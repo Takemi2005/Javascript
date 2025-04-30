@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispositivos de Mídia</title>
+    <script>
+        function mostrarInformacoes() {
+            const dispositivo = document.getElementById("dispositivo").value;
+            const info = document.getElementById("informacoes");
+
+            switch (dispositivo) {
+                case  "fitaCassete":
+                    info.textContent = "A fita cassete foi um dos principais meios de armazenamento de áudio nos anos 70 e 80. Era amplamente usada para gravar músicas e áudios.";
+                    break;
+                case "dvd":
+                    info.textContent = "O DVD (Digital Versatile Disc) é um formato de disco óptico usado para armazenar vídeos, músicas e dados. Foi muito popular nos anos 2000.";
+                    break;
+                case "cd":
+                    info.textContent = "O CD (Compact Disc) revolucionou a indústria musical nos anos 90, permitindo a reprodução de áudio com alta qualidade.";
+                    break;
+                default:
+                    info.textContent = "Por favor, selecione um dispositivo válido.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Informações sobre Dispositivos de Mídia</h1>
+    <label for="dispositivo">Escolha um dispositivo:</label>
+    <select id="dispositivo" onchange="mostrarInformacoes()">
+        <option value="">--Selecione--</option>
+        <option value="fitaCassete">Fita Cassete</option>
+        <option value="dvd">DVD</option>
+        <option value="cd">CD</option>
+    </select>
+    <p id="informacoes"></p>
+</body>
+</html>
