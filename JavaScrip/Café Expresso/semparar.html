@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sem Parar - Shopping</title>
+</head>
+<body>
+    <h1>Bem-vindo ao Shopping</h1>
+    <p>O serviço de sem tarifas está liberado para veículos com placas iniciadas em "ABC".</p>
+    <p>Veículos com outras placas serão cobrados R$1,00 pela entrada.</p>
+
+    <form id="placaForm">
+        <label for="placa">Digite a placa do veículo:</label>
+        <input type="text" id="placa" name="placa" maxlength="7" required>
+        <button type="submit">Verificar</button>
+    </form>
+
+    <p id="resultado"></p>
+    <script src="semparar.js"></script>
+
+
+</body>
+</html>

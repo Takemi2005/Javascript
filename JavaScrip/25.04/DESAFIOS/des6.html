@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Roupas</title>
+</head>
+<body>
+    <h1>Loja de Roupas</h1>
+    <label for="tipoRoupa">Escolha o tipo de roupa:</label>
+    <select id="tipoRoupa">
+        <option value="camisa">Camisa</option>
+        <option value="calca">Calça</option>
+        <option value="vestido">Vestido</option>
+    </select>
+    <button onclick="calcularPreco()">Calcular Preço</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularPreco() {
+            const tipoRoupa = document.getElementById('tipoRoupa').value;
+            let preco = 0;
+
+            switch (tipoRoupa) {
+                case 'camisa':
+                    preco = 50;
+                    break;
+                case 'calca':
+                    preco = 80;
+                    break;
+                case 'vestido':
+                    preco = 120;
+                    break;
+                default:
+                    alert('Tipo de roupa inválido!');
+                    return;
+            }
+
+            let precoFinal = preco;
+            if (preco > 100) {
+                precoFinal = preco * 0.9; // Aplicando 10% de desconto
+            }
+
+            document.getElementById('resultado').innerText = 
+                `Preço original: R$ ${preco.toFixed(2)}\nPreço final: R$ ${precoFinal.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

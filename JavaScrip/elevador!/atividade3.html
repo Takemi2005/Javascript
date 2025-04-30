@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Notas</title>
+    <link rel="stylesheet" href="atividade3.css">
+</head>
+<body>
+    <h1>Calculadora de Notas</h1>
+    <form id="gradeForm">
+        <label for="studentName">Nome do Aluno:</label>
+        <input type="text" id="studentName" required><br><br>
+
+        <label for="grade1">Nota 1:</label>
+        <input type="number" id="grade1" min="0" max="10" required><br><br>
+
+        <label for="grade2">Nota 2:</label>
+        <input type="number" id="grade2" min="0" max="10" required><br><br>
+
+        <label for="grade3">Nota 3:</label>
+        <input type="number" id="grade3" min="0" max="10" required><br><br>
+
+        <label for="workGrade">Nota dos Trabalhos:</label>
+        <input type="number" id="workGrade" min="0" max="10" required><br><br>
+
+        <button type="button" onclick="calculateGrade()">Calcular</button>
+    </form>
+
+    <h2 id="result"></h2>
+
+    <script src="atividade3.js"></script>
+</body>
+</html>

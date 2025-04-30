@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cafe</title>
+</head>
+<body>
+    <script src="cafe1.js"></script>
+</body>
+</html>
+<div id="menu">
+    <h1>Menu Café Expresso</h1>
+    <ul>
+        <li>Café Expresso: R$ 5,00</li>
+        <li>Cappuccino: R$ 8,00</li>
+        <li>Chocolate Quente: R$ 7,50</li>
+        <li>Chá: R$ 4,00</li>
+    </ul>
+    <label for="item">Escolha um item:</label>
+    <select id="item">
+        <option value="5">Café Expresso - R$ 5,00</option>
+        <option value="8">Cappuccino - R$ 8,00</option>
+        <option value="7.5">Chocolate Quente - R$ 7,50</option>
+        <option value="4">Chá - R$ 4,00</option>
+    </select>
+    <button onclick="adicionarItem()">Adicionar Item</button>
+    <h2>Pedido</h2>
+    <ul id="pedido"></ul>
+    <p id="total">Total: R$ 0,00</p>
+</div>
+

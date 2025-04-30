@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 4 - Vetor</title>
+</head>
+<body>
+    <input type="text" id="VetorBusca" placeholder="Digite os número separados por vírgula">
+    <input type="number" id="elementoBusca" placeholder="Elemento a buscar">
+    <button onclick="buscarElementoTela()">Buscar Elemento</button>
+    <p id="resultadoBusca"></p>
+
+    <script>
+          function buscarElementoTela() {
+            const vetor = document.getElementById("VetorBusca").value.split(",").map(Number);
+            const elemento = Number(document.getElementById("elementoBusca").value);
+            const índice = vetor.indexOf(elemento);
+            document.getElementById("resultadoBusca").innerHTML = "Elemento " + elemento + " encontrado no índice " + índice;
+        }
+    </script>
+    
+</body>
+</html>

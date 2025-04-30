@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estação do Ano</title>
+</head>
+<body>
+    <script>
+        const mes = parseInt(prompt("Digite um número de 1 a 12 para representar o mês:"));
+
+        switch (mes) {
+            case 12:
+            case 1:
+            case 2:
+                alert("A estação do ano é Verão.");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                alert("A estação do ano é Outono.");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                alert("A estação do ano é Inverno.");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                alert("A estação do ano é Primavera.");
+                break;
+            default:
+                alert("Número inválido! Por favor, insira um número de 1 a 12.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+    <link rel="stylesheet" href="atividade2.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .menu {
+            margin-bottom: 20px;
+        }
+        .summary {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Menu de Serviços - MECÂNICA DO ZÉ</h1>
+    <div class="menu">
+        <label for="clientName">Nome do Cliente:</label>
+        <input type="text" id="clientName" placeholder="Digite seu nome">
+        <br><br>
+        <label for="service">Escolha um serviço:</label>
+        <select id="service">
+            <option value="0">Selecione um serviço</option>
+            <option value="50">Lavagem Simples - R$50</option>
+            <option value="100">Lavagem Completa - R$100</option>
+            <option value="150">Polimento - R$150</option>
+        </select>
+        <br><br>
+        <button onclick="finalizarServico()">Finalizar Serviço</button>
+    </div>
+    <div id="summary" class="summary"></div>
+
+    <script src="atividade2.js"></script>
+</body>
+</html>

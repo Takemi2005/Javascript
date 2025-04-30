@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações sobre Carros</title>
+</head>
+<body>
+    <h1>Informações sobre Carros</h1>
+    <script>
+        // Solicita o modelo do carro ao usuário
+        let modelo = prompt("Digite o modelo do carro (Opções: Sedan, SUV, Hatch, Pickup):");
+
+        // Variáveis para armazenar informações do carro
+        let preco, anoFabricacao, tipoCombustivel;
+
+        // Switch para determinar as informações com base no modelo
+        switch (modelo.toLowerCase()) {
+            case "sedan":
+                preco = "R$ 80.000";
+                anoFabricacao = 2022;
+                tipoCombustivel = "Gasolina";
+                break;
+            case "suv":
+                preco = "R$ 120.000";
+                anoFabricacao = 2023;
+                tipoCombustivel = "Diesel";
+                break;
+            case "hatch":
+                preco = "R$ 60.000";
+                anoFabricacao = 2021;
+                tipoCombustivel = "Flex";
+                break;
+            case "pickup":
+                preco = "R$ 150.000";
+                anoFabricacao = 2023;
+                tipoCombustivel = "Diesel";
+                break;
+            default:
+                alert("Modelo não encontrado. Por favor, tente novamente.");
+                preco = null;
+        }
+
+        // Exibe as informações do carro, se o modelo for válido
+        if (preco) {
+            alert(`Modelo: ${modelo}\nPreço: ${preco}\nAno de Fabricação: ${anoFabricacao}\nTipo de Combustível: ${tipoCombustivel}`);
+            
+            // Solicita informações sobre os serviços realizados
+            let servico1 = parseFloat(prompt("Digite o valor do primeiro serviço realizado:"));
+            let servico2 = parseFloat(prompt("Digite o valor do segundo serviço realizado:"));
+            let servico3 = parseFloat(prompt("Digite o valor do terceiro serviço realizado:"));
+
+            // Calcula o valor total dos serviços
+            let valorTotalServicos = servico1 + servico2 + servico3;
+
+            // Exibe o relatório de realização de serviços
+            alert(`Relatório de Serviços:\nServiço 1: R$ ${servico1.toFixed(2)}\nServiço 2: R$ ${servico2.toFixed(2)}\nServiço 3: R$ ${servico3.toFixed(2)}\nValor Total: R$ ${valorTotalServicos.toFixed(2)}`);
+        }
+    </script>
+</body>
+</html>

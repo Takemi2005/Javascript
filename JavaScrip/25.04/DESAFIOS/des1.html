@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moeda</title>
+</head>
+<body>
+    <h1>Conversor de Moeda</h1>
+    <form id="currencyForm">
+        <label for="reais">Valor em Reais (R$):</label>
+        <input type="number" id="reais" name="reais" step="0.01" required>
+        <br><br>
+        <label for="usdRate">Taxa de câmbio para Dólares (US$):</label>
+        <input type="number" id="usdRate" name="usdRate" step="0.01" required>
+        <br><br>
+        <label for="eurRate">Taxa de câmbio para Euros (€):</label>
+        <input type="number" id="eurRate" name="eurRate" step="0.01" required>
+        <br><br>
+        <button type="button" onclick="convertCurrency()">Converter</button>
+    </form>
+    <h2>Resultado:</h2>
+    <p id="result"></p>
+
+    <script>
+        function convertCurrency() {
+            const reais = parseFloat(document.getElementById('reais').value);
+            const usdRate = parseFloat(document.getElementById('usdRate').value);
+            const eurRate = parseFloat(document.getElementById('eurRate').value);
+
+            if (isNaN(reais) || isNaN(usdRate) || isNaN(eurRate)) {
+                document.getElementById('result').textContent = "Por favor, insira valores válidos.";
+                return;
+            }
+
+            let resultText = "";
+
+            switch (true) {
+                case reais > 0:
+                    const dollars = (reais / usdRate).toFixed(2);
+                    const euros = (reais / eurRate).toFixed(2);
+                    resultText = `Valor em Dólares (US$): ${dollars} | Valor em Euros (€): ${euros}`;
+                    break;
+                default:
+                    resultText = "O valor em reais deve ser maior que zero.";
+            }
+
+            document.getElementById('result').textContent = resultText;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Áreas</title>
+    <script>
+        function calcularArea() {
+            const figura = prompt("Escolha a figura geométrica (círculo, quadrado, triângulo):").toLowerCase();
+            let area;
+
+            switch (figura) {
+                case "círculo":
+                case "circulo":
+                    const raio = parseFloat(prompt("Informe o raio do círculo:"));
+                    if (!isNaN(raio) && raio > 0) {
+                        area = Math.PI * Math.pow(raio, 2);
+                        alert(`A área do círculo é: ${area.toFixed(2)}`);
+                    } else {
+                        alert("Valor inválido para o raio.");
+                    }
+                    break;
+
+                case "quadrado":
+                    const lado = parseFloat(prompt("Informe o lado do quadrado:"));
+                    if (!isNaN(lado) && lado > 0) {
+                        area = Math.pow(lado, 2);
+                        alert(`A área do quadrado é: ${area.toFixed(2)}`);
+                    } else {
+                        alert("Valor inválido para o lado.");
+                    }
+                    break;
+
+                case "triângulo":
+                case "triangulo":
+                    const base = parseFloat(prompt("Informe a base do triângulo:"));
+                    const altura = parseFloat(prompt("Informe a altura do triângulo:"));
+                    if (!isNaN(base) && base > 0 && !isNaN(altura) && altura > 0) {
+                        area = (base * altura) / 2;
+                        alert(`A área do triângulo é: ${area.toFixed(2)}`);
+                    } else {
+                        alert("Valores inválidos para base ou altura.");
+                    }
+                    break;
+
+                default:
+                    alert("Figura geométrica não reconhecida.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora de Áreas</h1>
+    <button onclick="calcularArea()">Calcular Área</button>
+</body>
+</html>

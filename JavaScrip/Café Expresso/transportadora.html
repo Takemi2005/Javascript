@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastreamento de Pedidos - LOGI MAIS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label, button {
+            font-size: 16px;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rastreamento de Pedidos - LOGI MAIS</h1>
+    <p>Digite a sigla para verificar a localização do seu produto:</p>
+    <form id="rastreamentoForm">
+        <label for="sigla">Sigla:</label>
+        <input type="text" id="sigla" maxlength="2" required>
+        <button type="submit">Rastrear</button>
+    </form>
+    <div id="resultado"></div>
+    <script src="transportadora.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoção Pizzaria Bom Sabor</title>
+    
+</head>
+<body>
+    <h1>Promoção Pizzaria Bom Sabor</h1>
+    <p>Informe o tamanho das pizzas que você deseja pedir:</p>
+    <form onsubmit="event.preventDefault(); verificarBrinde();">
+        <label for="pizza1">Tamanho da primeira pizza:</label>
+        <select id="pizza1" required>
+            <option value="">Selecione</option>
+            <option value="grande">Grande</option>
+            <option value="média">Média</option>
+            <option value="pequena">Pequena</option>
+        </select>
+        <br><br>
+        <label for="pizza2">Tamanho da segunda pizza:</label>
+        <select id="pizza2" required>
+            <option value="">Selecione</option>
+            <option value="grande">Grande</option>
+            <option value="média">Média</option>
+            <option value="pequena">Pequena</option>
+        </select>
+        <br><br>
+        <button type="submit">Verificar Brinde</button>
+    </form>
+    <p id="resultado" style="font-weight: bold; margin-top: 20px;"></p>
+    <script src="pizza.js"></script>
+</body>
+</html>

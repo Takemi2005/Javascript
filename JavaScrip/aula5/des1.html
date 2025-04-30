@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado</title>
+    <script>
+        function calcularTotal() {
+            let total = 0;
+            let continuar = true;
+
+            while (continuar) {
+                let produto = prompt("Digite o nome do produto:");
+                let preco = parseFloat(prompt("Digite o preço do produto:"));
+
+                if (!isNaN(preco)) {
+                    total += preco;
+                } else {
+                    alert("Preço inválido. Tente novamente.");
+                }
+
+                continuar = confirm("Deseja adicionar mais produtos?");
+            }
+
+            alert("O total da compra é: R$ " + total.toFixed(2));
+        }
+    </script>
+</head>
+<body>
+    <h1>Supermercado</h1>
+    <button onclick="calcularTotal()">Calcular Total</button>
+</body>
+</html>
